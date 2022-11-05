@@ -51,9 +51,59 @@ class Home extends Component {
         },
       ],
 
+      dataTampil: [
+        {
+          judul: 'Apel',
+          deskripsi: 'Apel adalah buah',
+        },
+        {
+          judul: 'Jeruk',
+          deskripsi: 'Jeruk adalah buah',
+        },
+        {
+          judul: 'Rambutan',
+          deskripsi: 'Rambutan adalah buah',
+        },
+        {
+          judul: 'Mangga',
+          deskripsi: 'Mangga adalah buah',
+        },
+        {
+          judul: 'Starwberry',
+          deskripsi: 'Starwberry adalah buah',
+        },
+        {
+          judul: 'Pisang',
+          deskripsi: 'Pisang adalah buah',
+        },
+        {
+          judul: 'Melon',
+          deskripsi: 'Melon adalah buah',
+        },
+        {
+          judul: 'Anggur',
+          deskripsi: 'Anggur adalah buah',
+        },
+        {
+          judul: 'Pear',
+          deskripsi: 'Pear adalah buah',
+        },
+      ],
+
       pencarian: '',
     };
   }
+
+  // create function
+  pencarian = () => {
+    let data = this.state.data;
+
+    data = data.filter(item =>
+      item.judul.toLowerCase().includes(this.state.pencarian.toLowerCase()),
+    );
+
+    this.setState({dataTampil: data});
+  };
 
   render() {
     return (
@@ -78,7 +128,9 @@ class Home extends Component {
 
         <TextInput
           value={this.state.pencarian}
-          onChangeText={text => this.setState({pencarian: text})}
+          onChangeText={text =>
+            this.setState({pencarian: text}, () => this.pencarian())
+          }
           style={{
             backgroundColor: '#fff',
             marginHorizontal: 20,
@@ -86,10 +138,11 @@ class Home extends Component {
             marginBottom: 20,
             borderRadius: 3,
           }}
+          placeholder="Masukkan kata disini"
         />
 
         <FlatList
-          data={this.state.data}
+          data={this.state.dataTampil}
           renderItem={({item, index}) => (
             <TouchableOpacity
               style={{

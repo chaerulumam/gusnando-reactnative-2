@@ -54,7 +54,7 @@ class Home extends Component {
           style={{
             textAlign: 'center',
             color: '#fff',
-            fontSize: 12,
+            fontSize: 15,
           }}>
           {this.props.route.params.deskripsi}
         </Text>
