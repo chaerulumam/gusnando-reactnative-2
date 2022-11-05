@@ -99,7 +99,13 @@ class Home extends Component {
                 padding: 10,
                 borderRadius: 5,
                 elevation: 3,
-              }}>
+              }}
+              onPress={() =>
+                this.props.navigation.navigate('Detail', {
+                  judul: item.judul,
+                  deskripsi: item.deskripsi,
+                })
+              }>
               <Text style={{color: '#fff'}}>{item.judul}</Text>
               <Text style={{color: '#fff'}}>{item.deskripsi}</Text>
             </TouchableOpacity>
