@@ -135,7 +135,7 @@ class Home extends Component {
           <TouchableOpacity
             onPress={() => this.props.navigation.navigate('About')}>
             <Icon
-              name="user"
+              name="question-circle"
               size={30}
               color="#fff"
               style={{marginRight: 10}}

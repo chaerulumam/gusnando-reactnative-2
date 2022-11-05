@@ -1,4 +1,4 @@
-package com.secondlearn;
+package com.jamet.kamuskeren;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

@@ -1,4 +1,4 @@
-package com.secondlearn.newarchitecture;
+package com.jamet.kamuskeren.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.secondlearn.BuildConfig;
-import com.secondlearn.newarchitecture.components.MainComponentsRegistry;
-import com.secondlearn.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.jamet.kamuskeren.BuildConfig;
+import com.jamet.kamuskeren.newarchitecture.components.MainComponentsRegistry;
+import com.jamet.kamuskeren.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
